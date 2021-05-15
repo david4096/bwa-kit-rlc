@@ -8,7 +8,7 @@ mkdir -p iexec_in
 # get args for bwamem
 args=$1
 command="../bwa-0.7.17/bwa mem \
- $args -H ../hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 \
+ $args ../hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 \
  ../iexec_in/$IEXEC_INPUT_FILE_NAME_2 \
  | samtools sort -o output.bam"
 echo "Executing bwa-mem with command line..."
