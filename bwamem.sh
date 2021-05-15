@@ -10,7 +10,7 @@ args=$1
 command="../bwa-0.7.17/bwa mem \
  $args ../hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 \
  ../iexec_in/$IEXEC_INPUT_FILE_NAME_2 \
- | samtools sort -o output.bam"
+ | samtools sort -o output.bam -"
 echo "Executing bwa-mem with command line..."
 echo $command
 
