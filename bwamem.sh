@@ -9,8 +9,7 @@ mkdir -p iexec_in
 args=$1
 command="../bwa-0.7.17/bwa mem \
  $args ../hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 \
- ../iexec_in/$IEXEC_INPUT_FILE_NAME_2 \
- | samtools sort -o output.bam -"
+ ../iexec_in/$IEXEC_INPUT_FILE_NAME_2 > output.sam"
 echo "Executing bwa-mem with command line..."
 echo $command
 
@@ -19,7 +18,7 @@ cd iexec_out
 $command
 
 # find location of a bam file
-bamfile="output.bam"
+bamfile="output.sam"
 
 # hash the bam file
 hash=`md5sum $bamfile | awk '{ print $1 }'`
