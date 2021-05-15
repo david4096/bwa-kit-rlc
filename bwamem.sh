@@ -7,7 +7,7 @@ mkdir -p iexec_in
 
 # get args for bwamem
 args=$1
-command="../bwa-0.7.17/bwakit/run-bwamem $args -H hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 ../iexec_in/$IEXEC_INPUT_FILE_NAME_2"
+command="../bwa-0.7.17/bwakit/run-bwamem $args -H ../hs38.fa ../iexec_in/$IEXEC_INPUT_FILE_NAME_1 ../iexec_in/$IEXEC_INPUT_FILE_NAME_2"
 echo "Executing bwa-mem with command line..."
 echo $command
 
