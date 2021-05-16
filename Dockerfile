@@ -20,7 +20,8 @@ RUN bwa-0.7.17/bwakit/run-gen-ref hs38
 RUN bwa-0.7.17/bwa index hs38.fa
 
 # download script from repo
-RUN wget https://raw.githubusercontent.com/david4096/bwa-kit-rlc/0.1a/bwamem.sh
+RUN wget https://raw.githubusercontent.com/david4096/bwa-kit-rlc/0.1a10/bwamem.sh
 RUN chmod a+x bwamem.sh
+RUN pwd
 # use script as entrypoint
-ENTRYPOINT ["bwamem.sh"]
+ENTRYPOINT ["/bin/bash", "bwamem.sh"]
